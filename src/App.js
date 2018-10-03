@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <div>
         <Login />
-        <MapView />
-        <PlaceInfo />
+        {/* <MapView />
+        <PlaceInfo /> */}
       </div>
     );
   }
