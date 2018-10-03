@@ -1,4 +1,4 @@
-import React from 'rect'
+import React from 'react'
 
 class Places extends React.Component  {
     constructor(props){
