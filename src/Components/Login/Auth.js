@@ -17,4 +17,4 @@ import firebaseIntegration from '../../firebase';
 
 
 
-export default Auth;
+// export default Auth;
