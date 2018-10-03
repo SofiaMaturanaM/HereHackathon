@@ -1,7 +1,7 @@
 import React from 'react';
 import './Login.css';
 import Logo from './Logo';
-// import Auth from './Auth';
+import Auth from './Auth';
 import Options from './Options';
 
 
@@ -10,7 +10,7 @@ const Login = () => {
         <div className = "loginMainContainer" >
         
        <Logo />
-        
+        <Auth />
         <Options />
 
         
