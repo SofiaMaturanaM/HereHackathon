@@ -1,16 +1,28 @@
 import React from 'react';
 import './Login.css';
-import Button  from '@material-ui/core/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Options = () => {
   return (
-    <div>
-      {/* <img/>  */}
-      <p>Dictado por voz </p> 
-      <Button variant="raised" color="primary">Hola</Button>
-      {/* <img/> */}
-      <p>Color contraste</p> 
-      <button></button>
+    <div className="container-fluid">
+      {/* opcion 1 */}
+      <div> 
+        <FontAwesomeIcon icon="headphones" />
+        <p>Dictado por voz </p> 
+        <label className="switch">
+          <input type="checkbox"/>
+          <span className="slider round"></span>
+        </label>
+      </div>
+      {/* opcion 1 */}
+      <div>
+        <FontAwesomeIcon icon="adjust" />
+        <p>Color contraste</p> 
+        <label className="switch">
+          <input type="checkbox"/>
+          <span className="slider round"></span>
+        </label>
+      </div>
     </div>
   );
 };
