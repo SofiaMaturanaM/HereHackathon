@@ -16,7 +16,7 @@ class Auth extends Component {
             error
         } = this.props;
 
-        return ( 
+        return (
             <div>
                 <button onClick = { signInWithGoogle }> Signin with Google </button> 
             <button onClick = { signInWithFacebook } > Signin with Facebook </button>
