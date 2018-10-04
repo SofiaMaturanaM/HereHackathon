@@ -11,9 +11,34 @@ class Map extends Component {
       this.state = {
         url: 'https://image.maps.api.here.com/mia/1.6/mapview?w=600&h=300&z=10&t=5&poitxs=16&poitxc=black&poifc=yellow',
         points: [],
+        value: '0,0', 
+      error: null,
       }
     }
-  
+
+
+  componentDidMount() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          this.setState({
+            value: position.coords.latitude + ',' + position.coords.longitude,
+            error: null,
+          });
+        },
+        (error) => this.setState(
+          {error: error.message}
+        )
+      );
+    }
+  }
+
+  changeLocation(evt) {
+    this.setState({
+        value: evt.target.value,
+      }
+    )
+  }
     // Helper function to format list of points
   
     getPOIList() {
@@ -24,6 +49,8 @@ class Map extends Component {
         }
         return param;
       }
+
+      
   
       return '';
     }
@@ -33,13 +60,22 @@ class Map extends Component {
   
     render() {
       return (
-        <img
+        <div>
+          <input
+              className="new-todo"
+              value={ this.state.value }
+              onChange={ evt => this.changeLocation(evt) }
+              />
+          <img
           src={ this.state.url
             + '&app_id=' + this.props.app_id
             + '&app_code=' + this.props.app_code
             + this.getPOIList()
             }
-          alt="Todo Map"/>
+          alt="Here Maps"/>
+        </div>
+        
+
       );
     }
   }

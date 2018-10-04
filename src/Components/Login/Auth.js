@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, { Component } from 'react'; 
 import firebaseIntegration from '../../firebase'; 
 import withFirebaseAuth from 'react-auth-firebase'; 
 
@@ -42,4 +42,4 @@ saveUserInDatabase:true
 }
 
 
-export default withFirebaseAuth(Auth, firebase, authConfig); 
+export default withFirebaseAuth(Auth, authConfig); 

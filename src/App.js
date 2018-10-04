@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import { faAdjust } from '@fortawesome/free-solid-svg-icons';
 
+
 library.add(faHeadphones, faAdjust);
 
 class App extends Component {
